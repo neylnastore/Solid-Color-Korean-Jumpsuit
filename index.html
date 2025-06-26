@@ -1,1 +1,880 @@
-sddd
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solid Color Korean Jumpsuit - Neylna Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffeef8 100%);
+        }
+        
+        .product-shadow {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        
+        .discount-badge {
+            background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+        }
+        
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .modal-enter {
+            opacity: 0;
+        }
+        
+        .modal-enter .modal-content {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        
+        .modal-leave-to {
+            opacity: 0;
+        }
+        
+        .modal-leave-to .modal-content {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        
+        .notification {
+            animation: slideIn 0.5s forwards, slideOut 0.5s forwards 2.5s;
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        @keyframes slideOut {
+            from { transform: translateY(0); }
+            to { transform: translateY(100%); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .color-option {
+            transition: transform 0.2s;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .color-option.selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 3px white, 0 0 0 5px #ff6b6b;
+        }
+        
+        .thumbnail {
+            transition: all 0.3s ease;
+        }
+        
+        .thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg sticky top-0 z-40 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://cdn.orderonline.id/uploads/images_8057731750768190275.png" alt="Neylna Store" class="h-10 mr-2">
+                <span class="text-xl font-bold text-gray-800">Neylna Store</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-2 text-gray-700">
+                    <i class="fas fa-shield-alt text-pink-500"></i>
+                    <span class="text-sm">100% Original</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2 text-gray-700">
+                    <i class="fas fa-truck text-pink-500"></i>
+                    <span class="text-sm">Gratis Ongkir</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2 text-gray-700">
+                    <i class="fas fa-phone-alt text-pink-500"></i>
+                    <span class="text-sm">CS 24/7</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-8 md:py-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Solid Color Korean Jumpsuit</h1>
+                <p class="text-lg text-gray-600 mb-6">Tampil stylish dan nyaman dengan jumpsuit Korea berkualitas premium yang sedang trend!</p>
+                
+                <div class="flex items-center mb-6">
+                    <div class="flex mr-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <span class="text-gray-600">4.9/5 (5k+ Reviews)</span>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-md mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-500">Harga Normal:</span>
+                        <span class="text-gray-500 line-through">Rp 298.500</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg text-pink-600">Harga Promo:</span>
+                        <div>
+                            <span class="text-2xl font-bold text-pink-600">Rp 199.000</span>
+                            <span class="ml-2 px-2 py-1 text-xs font-bold text-white discount-badge rounded">50% OFF</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-md mb-6">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-bolt text-yellow-500 mr-2"></i>
+                        <span class="font-medium">KHUSUS PEMBAYARAN TF HARI INI DAPAT GRATIS ONGKIR + BLOUSE ATASAN OUTER</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-pink-500 mr-2"></i>
+                        <span class="text-sm text-gray-600">Promo berakhir dalam: <span id="countdown" class="font-bold text-pink-600">23:59:59</span></span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                    <a href="#order" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-cart mr-2"></i> BELI SEKARANG
+                    </a>
+                    <a href="#gallery" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 text-center transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-images mr-2"></i> LIHAT GAMBAR
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative">
+                <img src="https://cdn.hotishop.com/image/15687c644265ce0df963341ecdf50276bc580916-600.jpeg" alt="Solid Color Korean Jumpsuit" class="w-full h-auto rounded-lg product-shadow transform hover:scale-105 transition duration-500">
+                <div class="absolute -top-4 -left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    BESTSELLER
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-white shadow-lg rounded-full p-2 flex items-center justify-center">
+                    <div class="bg-pink-100 rounded-full p-3">
+                        <i class="fas fa-heart text-pink-500 text-xl"></i>
+                    </div>
+                    <div class="ml-2">
+                        <div class="text-xs text-gray-500">Disukai oleh</div>
+                        <div class="font-bold text-pink-500"><span id="likeCount">2.8k</span>+ orang</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Info Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kenapa Memilih Jumpsuit Kami?</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-tshirt text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Bahan Premium</h3>
+                    <p class="text-gray-600 text-center">Terbuat dari bahan katun Korea berkualitas tinggi yang lembut, adem, dan tidak mudah kusut.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-ruler-combined text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Potongan Pas</h3>
+                    <p class="text-gray-600 text-center">Desain slim fit yang menonjolkan bentuk tubuh dengan nyaman, tidak terlalu ketat maupun longgar.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-palette text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Warna Solid</h3>
+                    <p class="text-gray-600 text-center">Warna solid yang elegan dan tidak mudah luntur, cocok untuk berbagai kesempatan.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-6 md:p-8 flex items-center">
+                        <img src="https://cdn.hotishop.com/image/a744de31af8a20f22bfb43bdf6686e6c83edef61.webp" alt="Fitur Jumpsuit" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div class="md:w-1/2 p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Detail Produk</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Bahan: Katun Korea Premium (Adem & Nyaman)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Model: Slim Fit (Tidak Terlalu Ketat)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Tali pinggang adjustable untuk kenyamanan maksimal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Kantong depan fungsional</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Saku belakang</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Resleting depan dengan kancing pengaman</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Tersedia dalam 10 pilihan warna trendy</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-6 bg-white p-4 rounded-lg border border-pink-100">
+                            <div class="flex items-center">
+                                <i class="fas fa-gift text-pink-500 text-2xl mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-pink-600">BONUS KHUSUS HARI INI!</h4>
+                                    <p class="text-sm text-gray-600">Gratis Blouse Atasan Outer senilai Rp 89.000 untuk setiap pembelian via Transfer hari ini!</p>
+                                    <div class="md:flex">
+                    <div class="md:w-1/2 p-6 md:p-8 flex items-center">
+                        <img src="https://cdn.orderonline.id/uploads/images_2066881750871798613.png" alt="Fitur Jumpsuit" class="w-full h-auto rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Options -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Pilihan Warna Trendy</h2>
+                <p class="text-gray-600">Pilih warna favoritmu yang cocok untuk berbagai kesempatan</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Dusty Pink">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-pink-200 to-pink-300 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Dusty Pink</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Biru Denim">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-blue-300 to-blue-400 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Biru Denim</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Tosca">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-teal-300 to-teal-400 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Tosca</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Mustard">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-yellow-400 to-yellow-500 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Mustard</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Lavender">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-purple-200 to-purple-300 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Lavender</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Hitam">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-gray-700 to-gray-800 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Hitam</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Navy">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-blue-800 to-blue-900 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Navy</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Marun">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-red-700 to-red-800 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Marun</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Putih">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 mb-2 mx-auto border border-gray-300"></div>
+                    <span class="text-sm font-medium">Putih</span>
+                </div>
+                <div class="color-option rounded-lg p-4 text-center cursor-pointer" data-color="Mocca">
+                    <div class="w-full h-20 rounded-md bg-gradient-to-br from-amber-600 to-amber-700 mb-2 mx-auto"></div>
+                    <span class="text-sm font-medium">Mocca</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-gray-600 mb-4"><i class="fas fa-info-circle text-pink-500 mr-2"></i> Warna mungkin sedikit berbeda tergantung layar gadget Anda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Galeri Produk</h2>
+                <p class="text-gray-600">Lihat jumpsuit kami dari berbagai angle</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/f75e103201e44651ad20506879b6bb93ccf6d755.webp')">
+                    <img src="https://cdn.hotishop.com/image/f75e103201e44651ad20506879b6bb93ccf6d755.webp" alt="Jumpsuit 1" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/6d980f319856dacc4c5841c8cb88ad9d10fbe9b7.webp')">
+                    <img src="https://cdn.hotishop.com/image/6d980f319856dacc4c5841c8cb88ad9d10fbe9b7.webp" alt="Jumpsuit 2" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/38c68535773b08dec0fad46f1a0708fe2718df7d.webp')">
+                    <img src="https://cdn.hotishop.com/image/38c68535773b08dec0fad46f1a0708fe2718df7d.webp" alt="Jumpsuit 3" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/7358f7a97fff62b37195968cc1ff1acb217321c4-500.jpeg')">
+                    <img src="https://cdn.hotishop.com/image/7358f7a97fff62b37195968cc1ff1acb217321c4-500.jpeg" alt="Jumpsuit 4" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/e3cb72c2594140a28d1fcb39e6704ff59f8d7980-500.jpeg')">
+                    <img src="https://cdn.hotishop.com/image/e3cb72c2594140a28d1fcb39e6704ff59f8d7980-500.jpeg" alt="Jumpsuit 5" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/d7ea93faa8b75d72c1b4a9019578295ae1bbfd61-500.jpeg')">
+                    <img src="https://cdn.hotishop.com/image/d7ea93faa8b75d72c1b4a9019578295ae1bbfd61-500.jpeg" alt="Jumpsuit 6" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/d829cb4959d04b0ce5131eae182ac5adb148fd46-500.jpeg')">
+                    <img src="https://cdn.hotishop.com/image/d829cb4959d04b0ce5131eae182ac5adb148fd46-500.jpeg" alt="Jumpsuit 7" class="w-full h-full object-cover">
+                </div>
+                <div class="thumbnail rounded-lg overflow-hidden cursor-pointer" onclick="openModal('https://cdn.hotishop.com/image/5dd7358cd05f1eb701dc722e284c93375a71e968-500.jpeg')">
+                    <img src="https://cdn.hotishop.com/image/5dd7358cd05f1eb701dc722e284c93375a71e968-500.jpeg" alt="Jumpsuit 8" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Apa Kata Pelanggan Kami?</h2>
+                <p class="text-gray-600">Testimoni asli dari pembeli jumpsuit kami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            <span class="text-pink-600 font-bold">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Sarah</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"Bahan jumpsuitnya sangat nyaman dipakai, adem dan tidak gerah. Potongannya juga pas banget di badan. Warna sesuai gambar, packing rapi. Recommended banget!"</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            <span class="text-pink-600 font-bold">D</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Dina</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"Pertama kali beli jumpsuit disini dan langsung jatuh cinta. Bahannya premium, jahitan rapi, dan modelnya sangat stylish. Bonus blouse-nya juga bagus kualitasnya. Pokoknya worth it banget!"</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            <span class="text-pink-600 font-bold">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Rina</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"Udah beli 3 warna berbeda karena emang suka banget sama jumpsuit ini. Nyaman dipakai seharian, gampang mix and match, dan selalu dapat komplimen kalo pake ini. CS-nya juga ramah dan respon cepat."</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            <span class="text-pink-600 font-bold">A</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Ani</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"Pengiriman cepat, packing aman. Jumpsuitnya persis seperti di foto, bahannya lembut dan adem. Ukurannya sesuai size chart. Puas banget belanja disini, next mau koleksi warna lainnya."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- FAQ Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Pertanyaan yang Sering Diajukan</h2>
+                <p class="text-gray-600">Temukan jawaban atas pertanyaan Anda di sini</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                        <span>Bagaimana cara menentukan ukuran yang tepat?</span>
+                        <i class="fas fa-chevron-down text-pink-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-gray-600">Kami menyediakan size chart detail untuk setiap produk. Silakan ukur badan Anda dan cocokkan dengan size chart yang tersedia. Jika masih ragu, Anda bisa konsultasi dengan CS kami via WhatsApp.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                        <span>Berapa lama waktu pengiriman?</span>
+                        <i class="fas fa-chevron-down text-pink-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-gray-600">Pengiriman biasanya memakan waktu 2-5 hari kerja tergantung lokasi pengiriman. Untuk wilayah Jabodetabek biasanya lebih cepat, sekitar 1-3 hari kerja setelah proses packing selesai.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                        <span>Apakah bisa return atau refund?</span>
+                        <i class="fas fa-chevron-down text-pink-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-gray-600">Kami menerima return dalam kondisi barang belum dipakai/dicuci, tag masih lengkap, dan dalam waktu maksimal 3 hari setelah barang diterima. Untuk refund hanya berlaku jika barang cacat produksi atau tidak sesuai pesanan.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                        <span>Bagaimana cara klaim bonus blouse atasan?</span>
+                        <i class="fas fa-chevron-down text-pink-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-gray-600">Bonus blouse atasan akan otomatis dikirim bersama jumpsuit yang Anda pesan, tidak perlu klaim khusus. Pastikan Anda memilih metode pembayaran Transfer untuk mendapatkan bonus ini.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                        <span>Apakah tersedia COD (Cash On Delivery)?</span>
+                        <i class="fas fa-chevron-down text-pink-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-gray-600">Kami masih menyediakan layanan COD untuk menjaga keamanan dan kenyamanan kedua belah pihak, tetapi untuk promo ongkir dan Gratis Blouse Atasan Outer tidak berlaku untuk layanan COD.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Pesan Sekarang Juga!</h2>
+                <p class="text-gray-600">Isi form berikut untuk memesan jumpsuit kesayanganmu</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-6 md:p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-truck text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Gratis Ongkir</h3>
+                                <p class="text-sm text-gray-600">Khusus pembayaran via Transfer hari ini</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-gift text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Bonus Blouse Atasan</h3>
+                                <p class="text-sm text-gray-600">Senilai Rp 89.000 untuk pembelian hari ini</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-shield-alt text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Garansi 100%</h3>
+                                <p class="text-sm text-gray-600">Uang kembali jika barang tidak sesuai</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-pink-200">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600">Harga Normal:</span>
+                                <span class="text-gray-600 line-through">Rp 298.500</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-pink-600">Harga Promo:</span>
+                                <div>
+                                    <span class="text-xl font-bold text-pink-600">Rp 199.000</span>
+                                    <span class="ml-2 px-2 py-1 text-xs font-bold text-white discount-badge rounded">50% OFF</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-exclamation-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        <span class="font-bold">Stok Terbatas!</span> Hanya tersisa <span id="stockCount" class="font-bold">12</span> pcs lagi untuk promo hari ini.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-white p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Form Pemesanan</h3>
+                        
+                        <!-- OrderOnline Embed Form -->
+                        <div class="ooef">
+                            <form class="orderonline-embed-form" data-username="vera" data-product-slug="solid-color-korean-jumpsuit" data-product-id="685c3230aab1a74ba001392c" id="oo-embed-form-solid-color-korean-jumpsuit-3344" data-origin="orderonline">
+                                <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                            </form>
+                        </div>
+                        <script>
+                            if (typeof xLogError != 'function') {
+                                var xLogError = function (error) {
+                                    var req = new XMLHttpRequest();
+                                    var payload = JSON.stringify({
+                                        url: document.location.href,
+                                        line: error.line,
+                                        stack: error.stack
+                                    });
+                                    var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                    req.open('POST', 'https://api.orderonline.id/log', true);
+                                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                    req.send(params);
+                                };
+                            }
+                            try {
+                                if (typeof xEmbedScript != 'function') {
+                                    var xEmbedScript = function () {
+                                        !function(w, d, e, v, id, t, s) {
+                                            if (d.getElementById(id)) return;
+                                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                            s = d.getElementsByTagName(e)[0];
+                                            s.parentNode.insertBefore(t, s);
+                                        }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                    };
+                                }
+                                if (typeof xEmbedInit != 'function') {
+                                    var xEmbedInit = function (w, n) {
+                                        if (w.ooe) return;
+                                        n = w.ooe = function() {
+                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                        };
+                                        if (!w._ooe) w._ooe = n;
+                                        n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                    };
+                                }
+                                xEmbedInit(window);
+                                ooe('setup', 'redirect', 'https://vera.orderonline.id');
+                                ooe('init', '5f1a7807a9bf807d6c63d963', '685c3230aab1a74ba001392c', '685c3230aab1a74ba001392d', 'oo-embed-form-solid-color-korean-jumpsuit-3344', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                                if (!window.jQuery) {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        t.addEventListener('load', xEmbedScript);
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                                } else {
+                                    xEmbedScript();
+                                }
+                            } catch (e) {
+                                xLogError(e);
+                                throw e;
+                            }
+                        </script>
+                        <!-- End OrderOnline Embed Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- New Order Notification -->
+    <div id="new-order-notification" class="notification hidden fixed z-50 max-w-sm w-full bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="flex items-center p-4">
+            <div class="flex-shrink-0">
+                <div id="notification-avatar" class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"></div>
+            </div>
+            <div class="ml-3 flex-1">
+                <p class="text-sm font-medium text-gray-900">Baru saja dipesan!</p>
+                <p id="notification-text" class="text-sm text-gray-500">Seseorang dari <span class="region"></span> membeli produk ini</p>
+            </div>
+            <div class="ml-auto pl-3">
+                <button onclick="closeNotification()" class="text-gray-400 hover:text-gray-500">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
+        <div class="relative max-w-4xl w-full p-4">
+            <button id="closeModal" class="absolute -top-10 right-0 text-white text-2xl hover:text-pink-300">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="Product Image" class="w-full h-auto rounded-lg">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 0);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('countdownBottom').textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Dynamic Counters
+        function animateCounter(elementId, target, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const start = parseInt(element.textContent.replace(/,/g, ''));
+            const increment = Math.floor((target - start) / (duration / 16));
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = current.toLocaleString();
+                
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                }
+            }, 16);
+        }
+        
+        // Randomize counters on page load
+        window.addEventListener('load', () => {
+            const randomViewers = Math.floor(Math.random() * 500) + 800;
+            const randomStock = Math.floor(Math.random() * 5) + 8;
+            const randomLikes = Math.floor(Math.random() * 300) + 934;
+            
+            animateCounter('likeCount', randomLikes);
+            animateCounter('stockCount', randomStock);
+            
+            // Show notification after 3 seconds
+            setTimeout(showNotification, 3000);
+        });
+        
+        // Color Selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.add('transform', 'rotate-180');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('transform', 'rotate-180');
+                }
+            });
+        });
+        
+        // Image Modal
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // New Order Notification
+        const regions = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Makassar', 'Bali', 'Yogyakarta', 'Semarang', 'Palembang'];
+        const names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
+        const colors = ['bg-pink-500', 'bg-blue-500', 'bg-green-500', 'bg-purple-500', 'bg-yellow-500', 'bg-red-500'];
+
+        function showNewOrderNotification() {
+            const notification = document.getElementById('new-order-notification');
+            const avatar = document.getElementById('notification-avatar');
+            const text = document.querySelector('#notification-text .region');
+            
+            // Randomize notification content
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomRegion = regions[Math.floor(Math.random() * regions.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            avatar.textContent = randomName;
+            avatar.className = `w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${randomColor}`;
+            text.textContent = randomRegion;
+            
+            // Show notification
+            notification.classList.remove('hidden');
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 5000);
+        }
+
+        function closeNotification() {
+            document.getElementById('new-order-notification').classList.add('hidden');
+        }
+
+        // Show first notification after 3 seconds
+        setTimeout(showNewOrderNotification, 3000);
+        
+        // Then show periodically every 30-60 seconds
+        setInterval(() => {
+            if (Math.random() > 0.3) {
+                showNewOrderNotification();
+            }
+        }, 30000);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
